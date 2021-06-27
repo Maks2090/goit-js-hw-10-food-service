@@ -11,12 +11,17 @@ const togget = document.querySelector('#theme-switch-toggle');
 
 ulMenu.innerHTML = markup (menuDatabase);
 
+
+
 const Theme = {
     LIGHT: 'light-theme',
     DARK: 'dark-theme', 
 };
 
+
+
 function checkStorage(){
+    body.classList.add(Theme.LIGHT); 
     if (localStorage.getItem('checkbox') === 'true') {
         body.classList.add(localStorage.getItem('theme'))
         togget.checked = localStorage.getItem('checkbox')
